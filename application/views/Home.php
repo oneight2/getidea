@@ -4,10 +4,17 @@
     <ul class="sidebar-nav text-center">
       <!-- <img src="#" class="logo-sidenav"> -->
       <li><a href="#" id="menu-toggle">Menu</a></li>
-
-      <!-- <li><a href="#">Gallery</a></li>
-      <li class="list-sidenav"><a href="#">Register</a></li> -->
     </ul>
+    <div class="navbar">
+      <ul>
+        <li><a href=" ">Home</a></li>
+        <li><a href=" ">About us</a></li>
+        <li><a href=" ">Our Programs</a></li>
+        <li><a href=" ">Portfolio</a></li>
+        <li><a href=" ">Gallery</a></li>
+        <li><a href=" ">Contact</a></li>
+      </ul>
+    </div>
   </div>
   
   <div id="page-content-wrapper">

@@ -12,6 +12,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |	http://example.com/
 |
 | WARNING: You MUST set this value!
+
 |
 | If it is not set, then CodeIgniter will try guess the protocol and path
 | your installation, but due to security concerns the hostname will be set
