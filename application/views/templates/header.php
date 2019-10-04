@@ -24,15 +24,15 @@
         </ul>
         <div class="navbar">
           <ul data-aos="fade-left">
-            <li><a href=" ">Home</a></li>
-            <li><a href=" ">About us</a></li>
-            <li><a href=" ">Our Programs</a></li>
+            <li><a href=" ">Tentang Kami</a></li>
+            <li><a href="<?= base_url(); ?>Carousel">Carousel</a></li>
             <li><a href=" ">Portfolio</a></li>
-            <li><a href=" ">Gallery</a></li>
-            <li><a href=" ">Contact</a></li>
+            <li><a href=" ">Galeri</a></li>
+            <li><a href=" ">Pemesanan dan Komplain</a></li>
+            <li><a href=" ">Kontak</a></li>
           </ul>
         </div>
       </div>
-        <div id="page-content-wrapper">
-    <div class="container-fluid ">
-      <p class="text-right label" data-aos="fade-right"><span class="get">get</span><span class="idea">Idea()</span></p>
+      <div id="page-content-wrapper">
+        <div class="container-fluid ">
+          <p class="text-right label" data-aos="fade-right" id="parallax"><span class="get">get</span><span class="idea">Idea()</span></p>
