@@ -1,3 +1,7 @@
+.container-fluid{
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
 /*slider jangar ajig*/
 .deskripsi-carousel .judul {
     letter-spacing: 5px;
@@ -28,6 +32,15 @@
     100%{
         background:#F5C006;
     }
+}
+@keyframes hue {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  
+  to {
+    filter: hue-rotate(-360deg);
+  }
 }
 h1,h2,h3,h4,h5,h6{
   font-family: "Montserrat", sans-serif;
@@ -117,15 +130,7 @@ p{
   animation: bgcolor infinite 60s;
 
 }
-@keyframes hue {
-  from {
-    filter: hue-rotate(0deg);
-  }
-  
-  to {
-    filter: hue-rotate(-360deg);
-  }
-}
+
 .label{
 	font-family: 'Work Sans', sans-serif;
 	font-size: 5vw;
@@ -311,4 +316,11 @@ p{
   font-size: 1em;
   margin: 0;
   padding: 0.5em;
+}
+#fullpage {
+    /*padding: 115px 0 100px;*/
+    background-image: url(../../img/background/team-bg-left.png), url(../../img/background/team-bg-right.png);
+    background-position: left bottom, right top;
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain
 }

@@ -1,7 +1,7 @@
 
-<div id="fullpage" class="ml-5">
+<div id="fullpage" class="pl-5">
   <section class="vertical-scrolling" data-aos="fade-right">
-    <div class="row">
+    <div id="home" class="row">
       <!-- <div class="col-6">
         <h1>“Getidea Siap Merubah Aktifitas Konvensional Anda Menjadi Sebuah Sistem Digital yang Berjalan Secara Tersusun dan Rapih”</h1>
         
