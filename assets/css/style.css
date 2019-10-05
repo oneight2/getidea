@@ -322,5 +322,6 @@ p{
     background-image: url(../../img/background/bg-kiri.svg), url(../../img/background/bg-kanan.svg);
     background-position: left bottom, right top;
     background-repeat: no-repeat, no-repeat;
-    background-size: contain
+    background-size: contain;
+    position:fixed;
 }
