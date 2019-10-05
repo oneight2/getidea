@@ -319,7 +319,7 @@ p{
 }
 #fullpage {
     /*padding: 115px 0 100px;*/
-    background-image: url(../../img/background/team-bg-left.png), url(../../img/background/team-bg-right.png);
+    background-image: url(../../img/background/bg-kiri.svg), url(../../img/background/bg-kanan.svg);
     background-position: left bottom, right top;
     background-repeat: no-repeat, no-repeat;
     background-size: contain
