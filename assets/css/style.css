@@ -2,17 +2,7 @@
   padding-right: 0 !important;
   padding-left: 0 !important;
 }
-/*slider jangar ajig*/
-.deskripsi-carousel .judul {
-    letter-spacing: 5px;
-    margin: 0;
-}
 
-.deskripsi-carousel h1 {
-    letter-spacing: 2px;
-}
-
-/*tuntung slider*/
 @keyframes bgcolor{
     0%{
         background: #F5C006;
@@ -325,3 +315,98 @@ p{
     background-size: contain;
     position:fixed;
 }
+
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+
+/*slider jangar ajig*/
+.slide {height: 100vh;}
+
+.item {
+    position: relative;
+    margin: 1rem 0;
+    overflow: hidden;
+    height: 77vh;
+}
+
+.slide-item{
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+
+.info-slide {
+  color: dimgrey;
+}
+
+.info-slide .sub-judul {
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 3px;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin: 0;
+  transform: translateY(25%);
+  opacity: 0;  
+  transition: 0.4s all ease-in-out;
+}
+
+.info-slide .judul {
+  margin: 15px 0 0 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 44px;
+  line-height: 45px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  color: #2C2C2C;
+  transform: translateY(25%);
+  opacity: 0;
+  transition: 0.6s all ease-in-out;
+}
+
+.info-slide .deskripsi-slide{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  color: #7e7e7e;
+  line-height: 22px;
+  letter-spacing: 1px
+  transform: translateY(25%);
+  opacity: 0;
+  transition: 0.6s all ease-in-out;
+}
+
+.info-slide .info-btn{
+  color: #2C2C2C;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 3px;
+  font-size: 13px;
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: 700;
+  text-decoration: none;
+  transform: translateY(25%);
+  opacity: 0;
+  transition: 0.6s all ease-in-out;
+}
+
+.slide-gambar{
+  opacity: 0;
+  transform: translateX(100%);
+  transition: 0.6s all ease-in-out;
+}
+
+.active{
+  z-index: 1;
+}
+
+.active .sub-judul, .active .judul, .active .deskripsi-slide, .active .info-btn{
+  transform: translateY(0);
+  opacity: 1;
+  transition: 0.6s all ease-in-out;
+}
+
+.active .slide-gambar{
+  opacity: 1;
+  transition: 0.6s all ease-in-out;
+  transform: translateX(0);
+}
+/*tuntung slider*/
