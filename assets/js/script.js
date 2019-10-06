@@ -1,3 +1,14 @@
+$('#tes1').click(function(){
+  $('#item1').addClass('active');
+  $('#item2').removeClass('active');
+  console.log('tes1')
+})
+
+$('#tes2').click(function(){
+  $('#item1').removeClass('active');
+  $('#item2').addClass('active');
+  console.log('tes2')
+})
 
 $("#menu-toggle").click(function(e){
    e.preventDefault();
@@ -38,3 +49,5 @@ window.addEventListener('mousemove', (e) => {
   tl.style.transform = `translate3d(-${mouseXx}%, -${mouseYy}%, 0)`;
   
 });
+
+//slide
