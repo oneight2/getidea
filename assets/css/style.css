@@ -1,3 +1,4 @@
+
 .container-fluid{
   padding-right: 0 !important;
   padding-left: 0 !important;
@@ -92,7 +93,8 @@ p{
 }
 
 #wrapper.menuDisplayed #page-content-wrapper{
-  padding-left:50%;
+  margin-left:50%;
+  display: content
 }
 
 /* Sidebar styling */
@@ -124,10 +126,7 @@ p{
 .label{
 	font-family: 'Work Sans', sans-serif;
 	font-size: 5vw;
-  z-index: -2;	
-  position: absolute;
-  top: 0;
-  right: 0
+  
 }
 .label .get{
 	font-weight: 300;
@@ -185,27 +184,6 @@ p{
   display: grid;
 }
 
-.content--fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  min-height: 600px;
-  z-index: 100;
-  pointer-events: none;
-  padding: 1.5em;
-  grid-template-columns: 50% 50%; 
-  grid-template-rows: auto auto 4em;
-  grid-template-areas:  "header ..."
-              "... decotitle"
-              "demos decotitle";
-}
-
-.content--fixed a {
-  pointer-events: auto;
-}
-
 .content--layout {
   pointer-events: auto;
   justify-content: center;
@@ -217,15 +195,6 @@ p{
               "author ... link link";
 }
 
-.content--related {
-  text-align: center;
-  align-content: center;
-  justify-content: center;
-  padding: 0 2em;
-  min-height: 600px;
-  height: 100vh;
-  font-size: 0.85em;
-}
 
 .content__img {
   grid-column: 1 / 3;
@@ -237,7 +206,6 @@ p{
 
 .content__title {
   grid-area: title;
-  font-family: 'nexa_boldregular', sans-serif;
   letter-spacing: -0.025em;
   font-size: 8em;
   line-height: 160px;
@@ -273,40 +241,7 @@ p{
   transition: transform 0.3s ease-out;
 }
 
-.content__link {
-  pointer-events: auto;
-  grid-area: link;
-  align-self: end;
-  justify-self: start;
-  z-index: 10;
-  padding: 0 1em 0.15em;
-}
 
-.content__info {
-  grid-column: 1 / 3;
-}
-
-.content__related-item {
-  padding: 1em;
-  transition: color 0.3s;
-}
-
-.content__related-img {
-  max-width: 100%;
-  opacity: 0.8;
-  transition: opacity 0.3s;
-}
-
-.content__related-item:hover .content__related-img,
-.content__related-item:focus .content__related-img {
-  opacity: 1;
-}
-
-.content__related-title {
-  font-size: 1em;
-  margin: 0;
-  padding: 0.5em;
-}
 #fullpage {
     /*padding: 115px 0 100px;*/
     background-image: url(../../img/background/bg-kiri.svg), url(../../img/background/bg-kanan.svg);
@@ -315,6 +250,15 @@ p{
     background-size: contain;
     position:fixed;
 }
+
+.image-home{
+  width:  80%;
+  float: right
+}
+.text-home{
+  margin: auto ;
+}
+
 
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
@@ -410,3 +354,4 @@ p{
   transform: translateX(0);
 }
 /*tuntung slider*/
+

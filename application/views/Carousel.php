@@ -1,6 +1,6 @@
 <div class="slide">
   <div class="item">
-    <div class="slide-item" id="item1">
+    <div class="slide-item active" id="item1">
       <div class="row no-gutters">
         <div class="col-5 p-5 d-flex align-items-center">
           <div class="info-slide p-3">
