@@ -16,7 +16,6 @@ $('#fullpage').fullpage({
   controlArrows: false,
   anchors: ['firstSection', 'secondSection', 'thirdSection', 'fourthSection', 'fifthSection', 'sixSection' ],
   menu: '#menu',
-
   
 });
 
