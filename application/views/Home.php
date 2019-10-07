@@ -20,7 +20,7 @@
         <p>Pembeli adalah raja, kami implementasikan dengan konsultasi dan komunikasi yang baik untuk mencapai sebuah tujuan yang diinginkan</p>
       </div>
       <div class="col-8 d-flex justify-content-center">
-        <img alt="ERP Implementation" class="image-home" src="https://finbyz.tech/files/erp-implements.svg"
+        <img alt="ERP Implementation" class="image-home" src="<?= base_url(); ?>img/contact-bg-1.png"
                                     title="ERP Implementation">
       </div>
     </div>

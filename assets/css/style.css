@@ -93,8 +93,7 @@ p{
 }
 
 #wrapper.menuDisplayed #page-content-wrapper{
-  margin-left:50%;
-  display: content
+  margin-left:42%;
 }
 
 /* Sidebar styling */
@@ -258,6 +257,50 @@ p{
 .text-home{
   margin: auto ;
 }
+.btn6{
+  border:1px solid transparent; 
+   -webkit-transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+  transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+}
+
+.btn6::before {
+  content: '';
+  position: absolute;
+  left: 0px;
+  bottom:0px;
+  z-index:-1;
+  width: 0%;
+  height:1px;
+  background: #6098FF;
+  box-shadow: inset 0px 0px 0px #6098FF;
+  display: block;
+  -webkit-transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+  transition: all 0.4s cubic-bezier(.5, .24, 0, 1)
+}
+
+.btn6:hover::before {
+  width:100%;
+}
+
+.btn6::after {
+  content: '';
+  position: absolute;
+  right: 0px;
+  top:0px;
+  z-index:-1;
+  width: 0%;
+  height:1px;
+  background: #6098FF;
+  -webkit-transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+  transition: all 0.4s cubic-bezier(.5, .24, 0, 1)
+}
+.btn6:hover::after {
+  width:100%;
+}
+.btn6:hover{
+  border-left:1px solid #6098FF;
+  border-right:1px solid #6098FF;
+}
 
 
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i');
@@ -365,3 +408,4 @@ p{
 }
 /*tuntung slider*/
 
+.b{}
