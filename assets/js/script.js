@@ -1,14 +1,14 @@
-$('#tes1').click(function(){
-  $('#item1').addClass('active');
-  $('#item2').removeClass('active');
-  console.log('tes1')
-})
-
-$('#tes2').click(function(){
-  $('#item1').removeClass('active');
-  $('#item2').addClass('active');
-  console.log('tes2')
-})
+var i =0;
+setInterval(function(){
+  $.each($('.slide .item .slide-item'),function(index){
+    $('.slide .item .slide-item').eq(index).removeClass('active')
+    $('.indicator-gambar').eq(index).parent().removeClass('active')
+  })
+  $('.slide .item .slide-item').eq(i).addClass('active');
+  $('.indicator-gambar').eq(i).parent().addClass('active')
+  i++;
+  if(i>($('.slide .item .slide-item').length-1)) i = 0;
+}, 3000);
 
 $("#menu-toggle").click(function(e){
    e.preventDefault();
