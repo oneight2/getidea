@@ -13,7 +13,7 @@ class Admin extends CI_Controller
         if (isset($_POST)) {
             if ($this->Admin_model->login()) {
                 $this->session->set_userdata('login', true);
-                redirect('admin/dashboard');
+                redirect('admin/aplikasi');
             }
         }
 
@@ -23,12 +23,12 @@ class Admin extends CI_Controller
         $this->load->view('templatesAdmin/footer');
     }
 
-    public function dashboard()
+    public function aplikasi()
     {
-        $data['judul'] = 'Dashboard';
+        $data['judul'] = 'Pengelolaan Aplikasi';
         $this->load->view('templatesAdmin/header', $data);
         $this->load->view('templatesAdmin/sidebar');
-        $this->load->view('admin/dashboard');
+        $this->load->view('admin/aplikasi');
         $this->load->view('templatesAdmin/footer');
     }
 }
