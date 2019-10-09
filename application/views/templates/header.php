@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="<?= base_url(); ?>assets/css/style.css"></link>
         <title>getIdea() | <?= $judul ?></title>
     </head>
-    <body>
+    <body >
         
         <div id="wrapper" >
             <!-- Sidebar -->
@@ -24,18 +24,15 @@
                     <li><a href="#" id="menu-toggle">Menu</a></li>
                 </ul>
                 <div class="navbar">
-                    <ul data-aos="fade-left">
+                    <ul>
                         <li><a href="<?= base_url(); ?>">Tentang Kami</a></li>
                         <li><a href="<?= base_url(); ?>Carousel">Carousel</a></li>
                         <li><a href=" ">Portfolio</a></li>
                         <li><a href=" ">Galeri</a></li>
-                        <li><a href=" ">Pemesanan dan Komplain</a></li>
+                        <li><a href="<?= base_url() ?>pemesanan ">Pemesanan dan Komplain</a></li>
                         <li><a href=" ">Kontak</a></li>
-                        
-                        <li><a href="" class="btn6"><i class="fa fa-facebook "></i></a></li>
                     </ul>
                 </div>
             </div>
             <div id="page-content-wrapper">
                 <div class="container-fluid ">
-                    <!-- <p class="text-right label" style="z-index: 99;" data-aos="fade-right" id="parallax"><span class="get">get</span><span class="idea">Idea()</span></p> -->
