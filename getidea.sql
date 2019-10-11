@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 06 Okt 2019 pada 14.23
+-- Waktu pembuatan: 11 Okt 2019 pada 05.14
 -- Versi server: 10.4.6-MariaDB
 -- Versi PHP: 7.3.9
 
@@ -32,8 +32,29 @@ CREATE TABLE `aplikasi` (
   `id` int(11) NOT NULL,
   `nama_app` varchar(255) NOT NULL,
   `detail` text NOT NULL,
-  `preview` varchar(255) NOT NULL
+  `photo_preview` varchar(255) NOT NULL,
+  `video_preview` varchar(255) NOT NULL DEFAULT 'video.mkv'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `aplikasi`
+--
+
+INSERT INTO `aplikasi` (`id`, `nama_app`, `detail`, `photo_preview`, `video_preview`) VALUES
+(1, 'Simak Unwim', 'simak unwim simak unwim simak unwim simak unwim simak unwim simak unwim simak unwim simak unwim simak unwim simak unwim simak unwim simak unwim simak unwim simak unwim simak unwim simak unwim simak unwim simak unwim simak unwim simak unwim simak unwim simak unwim simak unwim simak unwim simak unwim simak unwim simak unwim simak unwim simak unwim simak unwim simak unwim simak unwim simak unwim simak unwim simak unwim ', 'photo.jpg', 'video.mkv'),
+(2, 'aaa', 'aaaa', 'photo.jpg', 'video.mkv'),
+(3, 'aan', 'masd', 'photo.jpg', 'video.mkv'),
+(4, 'asdasd', 'asdasdqwqdq', 'photo.jpg', 'video.mkv'),
+(5, 'asdas', 'asdwasdasd', 'photo.jpg', 'video.mkv'),
+(6, 'asdasdasda', 'malsmdalsm', 'photo.jpg', 'video.mkv'),
+(7, 'asdasd', 'msd asd', 'photo.jpg', 'video.mkv'),
+(8, 'asd', 'mashdasd', 'photo.jpg', 'video.mkv'),
+(9, 'masdas', ',samdas', 'photo.jpg', 'video.mkv'),
+(10, 'bnasdn', 'mnas', 'photo.jpg', 'video.mkv'),
+(11, 'basmdasdm', 'm,mnasdoas', '', 'video.mkv'),
+(12, 'bajsd', 'bjas', '', 'video.mkv'),
+(13, 'nasd', 'kd', '', 'video.mkv'),
+(14, 'assad', 'mnasda', '', 'video.mkv');
 
 -- --------------------------------------------------------
 
@@ -72,7 +93,7 @@ ALTER TABLE `gambar`
 -- AUTO_INCREMENT untuk tabel `aplikasi`
 --
 ALTER TABLE `aplikasi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT untuk tabel `gambar`
