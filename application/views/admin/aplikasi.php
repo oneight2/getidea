@@ -46,21 +46,26 @@ if (!$this->session->userdata('login') == true) {
                             <thead class="text-uppercase bg-primary">
                                 <tr class="text-white">
                                     <th scope="col">#</th>
-                                    <th scope="col">Nama Aplikasi</th>
+                                    <th scope="col">Aplikasi</th>
                                     <th scope="col">Detail</th>
                                     <th scope="col">Photo Preview</th>
                                     <th scope="col">action</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                <?php $i = 1; ?>
                                 <?php foreach ($aplikasi as $app) : ?>
                                     <tr>
-                                        <th scope="row">1</th>
+                                        <th scope="row"><?= $i; ?></th>
                                         <td><?= $app['nama_app']; ?></td>
                                         <td class="text-justify"><?= $app['detail']; ?></td>
                                         <td><img style="height:100px; width:auto" src="<?= base_url(); ?>img/app/<?= $app['photo_preview'] ?>" alt=""></td>
-                                        <td><button class="btn btn-sm btn-success"><i class="fa fa-edit"></i></button><button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button></i></td>
+                                        <td>
+                                            <button class="btn btn-sm btn-success"><i class="fa fa-edit"></i></button>
+                                            <a href="<?= base_url(); ?>admin/deleteData/<?= $app['id'] ?>/<?= $app['photo_preview'] ?>" class="btn btn-sm btn-danger" onclick="return confirm('r u fuckin sure to delete this shit?????')"><i class="fa fa-trash"></i></a>
+                                        </td>
                                     </tr>
+                                    <?php $i++; ?>
                                 <?php endforeach; ?>
                             </tbody>
                         </table>
@@ -82,7 +87,7 @@ if (!$this->session->userdata('login') == true) {
             </div>
             <div class="modal-body">
                 <!-- <form class="form-row" action="<?= base_url(); ?>admin/add_data" method="post" enctype="multipart/form-data"> -->
-                <?php echo form_open_multipart('admin/add_data'); ?>
+                <?php echo form_open_multipart('admin/addData'); ?>
                 <div class="form-group col-12">
                     <label for="nama">Nama Aplikasi</label>
                     <input type="text" class="form-control" id="nama_app" name="nama_app">

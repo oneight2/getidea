@@ -28,6 +28,10 @@ class Admin_model extends CI_Model
         ];
 
         $this->db->insert('aplikasi', $data);
-        redirect('admin/aplikasi');
+    }
+
+    public function delete($id)
+    {
+        $this->db->delete('aplikasi', ['id' => $id]);
     }
 }

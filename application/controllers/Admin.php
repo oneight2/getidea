@@ -35,7 +35,7 @@ class Admin extends CI_Controller
         $this->load->view('templatesAdmin/footer');
     }
 
-    public function add_data()
+    public function addData()
     {
         $photo = $_FILES['photo'];
 
@@ -62,5 +62,13 @@ class Admin extends CI_Controller
         }
 
         $this->Admin_model->add($photo);
+        redirect('admin/aplikasi');
+    }
+
+    public function deleteData($id, $photo)
+    {
+        $this->Admin_model->delete($id);
+        unlink('./img/app/' . $photo);
+        redirect('admin/aplikasi');
     }
 }
