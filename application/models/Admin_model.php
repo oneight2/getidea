@@ -28,6 +28,6 @@ class Admin_model extends CI_Model
         ];
 
         $this->db->insert('aplikasi', $data);
-        // redirect('admin/aplikasi');
+        redirect('admin/aplikasi');
     }
 }

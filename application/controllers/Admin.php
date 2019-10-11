@@ -41,14 +41,21 @@ class Admin extends CI_Controller
 
         //upload file
         if (!$photo == '') {
-            $config['upload_path'] = base_url() . 'img/app/';
-            $config['allowes_types'] = 'jpg|png|gif|jpeg';
+            //basic manual config
+            $namaFile = $_FILES['photo']['name'];
+            $extensiGambar = explode('.', $namaFile);
+            $extensiGambar = strtolower(end($extensiGambar));
+
+            $config['upload_path'] = './img/app';
+            $config['allowed_types'] = 'jpg|png|gif|jpeg';
+            $config['file_name'] = uniqid() . $extensiGambar;
 
             $this->load->library('upload', $config);
 
-            if (!$this->upload->do_upload('photo')) { //didieu gagal wae
-                $photo = $this->upload->data('file_name');
-                var_dump($photo);
+            if (!$this->upload->do_upload('photo')) {
+                $error = array('error' => $this->upload->display_errors());
+                var_dump($error);
+                die();
             } else {
                 $photo = $this->upload->data('file_name');
             }
