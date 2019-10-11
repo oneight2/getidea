@@ -61,7 +61,7 @@ if (!$this->session->userdata('login') == true) {
                                         <td class="text-justify"><?= $app['detail']; ?></td>
                                         <td><img style="height:100px; width:auto" src="<?= base_url(); ?>img/app/<?= $app['photo_preview'] ?>" alt=""></td>
                                         <td>
-                                            <button class="btn btn-sm btn-success"><i class="fa fa-edit"></i></button>
+                                            <a href="<?= base_url(); ?>admin/editPage/<?= $app['id'] ?>" class="btn btn-sm btn-success"><i class="fa fa-edit"></i></a>
                                             <a href="<?= base_url(); ?>admin/deleteData/<?= $app['id'] ?>/<?= $app['photo_preview'] ?>" class="btn btn-sm btn-danger" onclick="return confirm('r u fuckin sure to delete this shit?????')"><i class="fa fa-trash"></i></a>
                                         </td>
                                     </tr>
@@ -98,7 +98,7 @@ if (!$this->session->userdata('login') == true) {
                 </div>
                 <div class="form-group col-6">
                     <label for="p_preview">Photo Preview</label>
-                    <input type="file" class="form-control-file" id="p_preview" name="photo">
+                    <input type="file" class="form-control-file" id="p_preview" name="photo" required>
                 </div>
                 <div class="form-group col-6">
                     <label for="v_preview">video Preview</label>
