@@ -9,7 +9,14 @@ setInterval(function(){
   i++;
   if(i>($('.slide .item .slide-item').length-1)) i = 0;
 }, 3000);
-
+ $('.timeline-3').Timeline({
+  autoplay: true,
+  mode: 'vertical',
+  itemClass: 'box-item'
+   });
+ $('.carousel').carousel({
+  interval: 2000
+})
 $("#menu-toggle").click(function(e){
    e.preventDefault();
    $("#wrapper").toggleClass("menuDisplayed");
@@ -24,6 +31,10 @@ $('#fullpage').fullpage({
   menu: '#menu',
   
 });
+
+  if ($('.prettyprint').length) {
+    window.prettyPrint && prettyPrint();
+  }
 AOS.init({
 	duration : 2000,
 });

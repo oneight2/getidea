@@ -14,6 +14,9 @@
         <!-- amchart css -->
         <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
         <!-- others css -->
+        <!-- <link rel="stylesheet" href="<?= base_url(); ?>assets/css/default-css.css"> -->
+        <link rel="stylesheet" href="<?= base_url(); ?>assets/css/typography.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>assets/css/responsive.css">
         <link rel="stylesheet" href="<?= base_url(); ?>assets/css/stylesAdmin.css">
     </head>
     <body>

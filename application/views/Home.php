@@ -6,7 +6,7 @@
         <div class="content content--layout ">
           <img class="content__img" src="<?= base_url(); ?>img/1.jpg" alt="Some image" />
           <p class="content__title label" data-aos="fade-right" id="parallax"><span class="get">get</span><span class="idea">Idea()</span></p>
-          <p class="content__author">Copyright 2019</p>
+          <!-- <p class="content__author">Copyright 2019</p> -->
           <p class="content__desc">“Getidea Siap Merubah Aktifitas Konvensional Anda Menjadi Sebuah Sistem Digital yang Berjalan Secara Tersusun dan Rapih”</p>
           <!-- <a href="#" class="content__link">Discover</a> -->
         </div>
