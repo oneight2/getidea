@@ -14,9 +14,7 @@ setInterval(function(){
   mode: 'vertical',
   itemClass: 'box-item'
    });
- $('.carousel').carousel({
-  interval: 2000
-})
+
 $("#menu-toggle").click(function(e){
    e.preventDefault();
    $("#wrapper").toggleClass("menuDisplayed");
