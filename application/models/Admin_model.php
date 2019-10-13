@@ -40,6 +40,11 @@ class Admin_model extends CI_Model
         $this->db->delete('aplikasi', ['id' => $id]);
     }
 
+    public function deleteGambar($id)
+    {
+        $this->db->delete('gambar', ['id' => $id]);
+    }
+
     public function getDataById($id)
     {
         return $this->db->get_where('aplikasi', ['id' => $id])->row_array();

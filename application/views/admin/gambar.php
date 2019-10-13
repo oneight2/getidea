@@ -52,14 +52,18 @@
 
         <?php foreach ($aplikasi as $app) : ?>
             <div class="card mt-3 bg-primary text-white">
+                <div class="card-header">
+                    <h5><?= $app['nama_app'] ?></h5>
+                </div>
                 <div class="card-body">
-                    <h4 class="header-title text-white"><?= $app['nama_app'] ?></h4>
+                    <!-- <h4 class="header-title text-white"></h4> -->
                     <div class="card-columns">
                         <?php foreach ($gambar as $img) : ?>
 
                             <?php if ($img['id_aplikasi'] == $app['id']) : ?>
                                 <div class="card">
                                     <img src="<?= base_url() ?>img/moreApp/<?= $img['gambar'] ?>" alt="" class="card-img-top">
+                                    <a href="<?= base_url(); ?>admin/deleteImg/<?= $img['id'] ?>/<?= $img['gambar'] ?>" class="btn btn-danger pull-right btn-sm">hapus</a>
                                 </div>
                             <?php endif; ?>
 

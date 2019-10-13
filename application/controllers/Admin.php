@@ -131,6 +131,13 @@ class Admin extends CI_Controller
         redirect('admin/aplikasi');
     }
 
+    public function deleteImg($id, $photo)
+    {
+        $this->Admin_model->deleteGambar($id);
+        unlink('./img/moreApp/' . $photo);
+        redirect('admin/gambar');
+    }
+
     public function editPage($id)
     {
         $data['judul'] = 'Edit Aplikasi';
