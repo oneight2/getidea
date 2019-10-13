@@ -13,9 +13,9 @@ class Admin_model extends CI_Model
         }
     }
 
-    public function getAllApp()
+    public function getAllData($table)
     {
-        return $this->db->get('aplikasi')->result_array();
+        return $this->db->get($table)->result_array();
     }
 
     public function add($photo)
@@ -30,12 +30,17 @@ class Admin_model extends CI_Model
         $this->db->insert('aplikasi', $data);
     }
 
+    public function addMultiple($data = array())
+    {
+        return $this->db->insert_batch('gambar', $data);
+    }
+
     public function delete($id)
     {
         $this->db->delete('aplikasi', ['id' => $id]);
     }
 
-    public function getAppById($id)
+    public function getDataById($id)
     {
         return $this->db->get_where('aplikasi', ['id' => $id])->row_array();
     }

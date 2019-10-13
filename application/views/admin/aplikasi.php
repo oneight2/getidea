@@ -86,26 +86,25 @@ if (!$this->session->userdata('login') == true) {
                 <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
             </div>
             <div class="modal-body">
-                <!-- <form class="form-row" action="<?= base_url(); ?>admin/add_data" method="post" enctype="multipart/form-data"> -->
-                <?php echo form_open_multipart('admin/addData'); ?>
-                <div class="form-group col-12">
-                    <label for="nama">Nama Aplikasi</label>
-                    <input type="text" class="form-control" id="nama_app" name="nama_app">
-                </div>
-                <div class="form-group col-12">
-                    <label for="detail">Detail Aplikasi</label>
-                    <textarea class="form-control" id="detail" rows="4" name="detail"></textarea>
-                </div>
-                <div class="form-group col-6">
-                    <label for="p_preview">Photo Preview</label>
-                    <input type="file" class="form-control-file" id="p_preview" name="photo" required>
-                </div>
-                <div class="form-group col-6">
-                    <label for="v_preview">video Preview</label>
-                    <input type="file" class="form-control-file" id="v_preview">
-                </div>
-                <button type="submit" class="btn btn-primary" name="save">Save changes</button>
-                <?= form_close(); ?>
+                <form class="form-row" action="<?= base_url(); ?>admin/addData" method="post" enctype="multipart/form-data">
+                    <div class="form-group col-12">
+                        <label for="nama">Nama Aplikasi</label>
+                        <input type="text" class="form-control" id="nama_app" name="nama_app">
+                    </div>
+                    <div class="form-group col-12">
+                        <label for="detail">Detail Aplikasi</label>
+                        <textarea class="form-control" id="detail" rows="4" name="detail"></textarea>
+                    </div>
+                    <div class="form-group col-6">
+                        <label for="p_preview">Photo Preview</label>
+                        <input type="file" class="form-control-file" id="p_preview" name="photo" required>
+                    </div>
+                    <div class="form-group col-6">
+                        <label for="v_preview">video Preview</label>
+                        <input type="file" class="form-control-file" id="v_preview">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-sm" name="save">Save changes</button>
+                </form>
             </div>
 
         </div>

@@ -27,11 +27,23 @@ class Admin extends CI_Controller
     public function aplikasi()
     {
         $data['judul'] = 'Pengelolaan Aplikasi';
-        $data['aplikasi'] = $this->Admin_model->getAllApp();
+        $data['aplikasi'] = $this->Admin_model->getAllData('aplikasi');
 
         $this->load->view('templatesAdmin/header', $data);
         $this->load->view('templatesAdmin/sidebar');
         $this->load->view('admin/aplikasi');
+        $this->load->view('templatesAdmin/footer');
+    }
+
+    public function gambar()
+    {
+        $data['judul'] = 'Pengelolaan Gambar Aplikasi';
+        $data['aplikasi'] = $this->Admin_model->getAllData('aplikasi');
+        $data['gambar'] = $this->Admin_model->getAllData('gambar');
+
+        $this->load->view('templatesAdmin/header', $data);
+        $this->load->view('templatesAdmin/sidebar');
+        $this->load->view('admin/gambar');
         $this->load->view('templatesAdmin/footer');
     }
 
@@ -41,11 +53,12 @@ class Admin extends CI_Controller
 
         //upload file
         if (!$photo == '') {
-            //basic manual config
+            //pengambilan extensi
             $namaFile = $_FILES['photo']['name'];
             $extensiGambar = explode('.', $namaFile);
             $extensiGambar = strtolower(end($extensiGambar));
 
+            //config upload
             $config['upload_path'] = './img/app';
             $config['allowed_types'] = 'jpg|png|gif|jpeg';
             $config['file_name'] = uniqid() . $extensiGambar;
@@ -65,6 +78,52 @@ class Admin extends CI_Controller
         redirect('admin/aplikasi');
     }
 
+    public function addDataMultiple()
+    {
+        $jumlahData = count($_FILES['gambar']['name']);
+
+        for ($i = 0; $i < $jumlahData; $i++) :
+            //inisialisasi pengambilan data
+            $_FILES['file']['name'] = $_FILES['gambar']['name'][$i];
+            $_FILES['file']['type'] = $_FILES['gambar']['type'][$i];
+            $_FILES['file']['tmp_name'] = $_FILES['gambar']['tmp_name'][$i];
+            $_FILES['file']['size'] = $_FILES['gambar']['size'][$i];
+
+            //pengambilan extensi
+            $namaFile = $_FILES['file']['name'];
+            $extensiGambar = explode('.', $namaFile);
+            $extensiGambar = strtolower(end($extensiGambar));
+
+            //config upload
+            $config['upload_path'] = './img/moreApp';
+            $config['allowed_types'] = 'jpg|png|gif|jpeg';
+            $config['file_name'] = uniqid() . $extensiGambar;
+
+            $this->load->library('upload', $config);
+            $this->upload->initialize($config);
+
+
+            if ($this->upload->do_upload('file')) {
+                $fileData = $this->upload->data();
+
+                //membuat variable untuk ke database
+                $dataGambar[$i]['gambar'] = $fileData['file_name'];
+                $dataGambar[$i]['id_aplikasi'] =  $this->input->post('aplikasi', true);
+            }
+
+        endfor;
+
+        if ($dataGambar !== null) {
+            $insert = $this->Admin_model->addMultiple($dataGambar);
+            if ($insert) {
+                redirect('admin/gambar');
+            } else {
+                echo "gagal, mungkin bukan gambar.";
+                die();
+            }
+        }
+    }
+
     public function deleteData($id, $photo)
     {
         $this->Admin_model->delete($id);
@@ -75,7 +134,7 @@ class Admin extends CI_Controller
     public function editPage($id)
     {
         $data['judul'] = 'Edit Aplikasi';
-        $data['aplikasi'] = $this->Admin_model->getAppById($id);
+        $data['aplikasi'] = $this->Admin_model->getDataById($id);
 
         $this->load->view('templatesAdmin/header', $data);
         $this->load->view('templatesAdmin/sidebar');

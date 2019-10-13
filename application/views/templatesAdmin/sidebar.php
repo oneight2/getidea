@@ -11,7 +11,8 @@
                 <nav>
                     <ul class="metismenu" id="menu">
                         <li class="active"><a href="maps.html"><i class="ti-dashboard"></i> <span>Dashboard</span></a></li>
-                        <li class="active"><a href="maps.html"><i class="ti-dashboard"></i> <span>Pengelolaan Aplikasi</span></a></li>
+                        <li class="active"><a href="<?= base_url(); ?>admin/aplikasi"><i class="ti-dashboard"></i> <span>Pengelolaan Aplikasi</span></a></li>
+                        <li class="active"><a href="<?= base_url(); ?>admin/gambar"><i class="ti-dashboard"></i> <span>Pengelolaan Gambar Aplikasi</span></a></li>
                     </ul>
                 </nav>
             </div>
