@@ -8,6 +8,7 @@ class Admin extends CI_Controller
         $this->load->helper(array('form', 'url'));
     }
 
+    //pages
     public function index()
     {
 
@@ -35,6 +36,18 @@ class Admin extends CI_Controller
         $this->load->view('templatesAdmin/footer');
     }
 
+
+    public function editPage($id)
+    {
+        $data['judul'] = 'Edit Aplikasi';
+        $data['aplikasi'] = $this->Admin_model->getDataById($id);
+
+        $this->load->view('templatesAdmin/header', $data);
+        $this->load->view('templatesAdmin/sidebar');
+        $this->load->view('admin/editAplikasi');
+        $this->load->view('templatesAdmin/footer');
+    }
+
     public function gambar()
     {
         $data['judul'] = 'Pengelolaan Gambar Aplikasi';
@@ -47,6 +60,7 @@ class Admin extends CI_Controller
         $this->load->view('templatesAdmin/footer');
     }
 
+    //proses
     public function addData()
     {
         $photo = $_FILES['photo'];
@@ -95,7 +109,7 @@ class Admin extends CI_Controller
             $extensiGambar = strtolower(end($extensiGambar));
 
             //config upload
-            $config['upload_path'] = './img/moreApp';
+            $config['upload_path'] = './img/app';
             $config['allowed_types'] = 'jpg|png|gif|jpeg';
             $config['file_name'] = uniqid() . $extensiGambar;
 
@@ -136,17 +150,6 @@ class Admin extends CI_Controller
         $this->Admin_model->deleteGambar($id);
         unlink('./img/moreApp/' . $photo);
         redirect('admin/gambar');
-    }
-
-    public function editPage($id)
-    {
-        $data['judul'] = 'Edit Aplikasi';
-        $data['aplikasi'] = $this->Admin_model->getDataById($id);
-
-        $this->load->view('templatesAdmin/header', $data);
-        $this->load->view('templatesAdmin/sidebar');
-        $this->load->view('admin/editAplikasi');
-        $this->load->view('templatesAdmin/footer');
     }
 
     public function editData()
