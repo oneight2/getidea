@@ -169,6 +169,14 @@ p{
 #fullpage section{
   width: 100%;
 }
+#fullpage, #pemesanan{
+    /*padding: 115px 0 100px;*/
+    background-image: url(../../img/background/bg-kiri.svg), url(../../img/background/bg-kanan.svg);
+    background-position: left bottom, right top;
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain;
+    /*position:fixed;*/
+}
 .content-wrap {
   position: relative;
   display: flex;
@@ -243,14 +251,7 @@ p{
 }
 
 
-#fullpage {
-    /*padding: 115px 0 100px;*/
-    background-image: url(../../img/background/bg-kiri.svg), url(../../img/background/bg-kanan.svg);
-    background-position: left bottom, right top;
-    background-repeat: no-repeat, no-repeat;
-    background-size: contain;
-    position:fixed;
-}
+
 
 .image-home{
   width:  80%;
@@ -365,27 +366,19 @@ p{
   transition: 0.4s all ease-in-out;
 }
 /*tuntung slider*/
-.tab-menu ul li{
-  margin: 0 auto;
-}
-.tab-menu ul .active{
-  background-color: black;
-}
 
+/*page pemesnanan*/
+#pemesanan .img-pemesanan{
+  position: fixed;
+  max-width: 200px;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+}
 .nav-item{
   margin: auto;
   width: 50%;
   text-align: center;
-}
-.card-header{
-  background-color: #2a2d51;
-  color: white;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-.card{
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
 }
 .nav-item .active {
   background-image: linear-gradient(45deg,#4568DC,#B06AB3);
@@ -406,7 +399,7 @@ p{
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   position: relative;
-  /*background: white;*/
+  transition: 2s ease-in-out;
   padding: 50px;
   padding-bottom: 80px;
   width: 70%;
