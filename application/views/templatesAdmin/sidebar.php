@@ -13,6 +13,7 @@
                         <li class="active"><a href="maps.html"><i class="ti-dashboard"></i> <span>Dashboard</span></a></li>
                         <li class="active"><a href="<?= base_url(); ?>admin/aplikasi"><i class="ti-dashboard"></i> <span>Pengelolaan Aplikasi</span></a></li>
                         <li class="active"><a href="<?= base_url(); ?>admin/gambar"><i class="ti-dashboard"></i> <span>Pengelolaan Gambar Aplikasi</span></a></li>
+                        <li class="active"><a href="<?= base_url(); ?>admin/komplain"><i class="ti-dashboard"></i> <span>Pengelolaan Komplain</span></a></li>
                     </ul>
                 </nav>
             </div>

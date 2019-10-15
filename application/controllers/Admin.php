@@ -60,6 +60,18 @@ class Admin extends CI_Controller
         $this->load->view('templatesAdmin/footer');
     }
 
+    public function komplain()
+    {
+        $data['judul'] = 'Komplain';
+        $data['komplain'] = $this->Admin_model->getAllData('komplain');
+        $data['detail_komplain'] = $this->Admin_model->getAllData('detail_komplain');
+
+        $this->load->view('templatesAdmin/header', $data);
+        $this->load->view('templatesAdmin/sidebar');
+        $this->load->view('admin/komplain');
+        $this->load->view('templatesAdmin/footer');
+    }
+
     //proses
     public function addData()
     {
