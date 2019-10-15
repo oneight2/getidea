@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 11 Okt 2019 pada 08.04
+-- Waktu pembuatan: 15 Okt 2019 pada 03.43
 -- Versi server: 10.4.6-MariaDB
 -- Versi PHP: 7.3.9
 
@@ -47,6 +47,17 @@ INSERT INTO `aplikasi` (`id`, `nama_app`, `detail`, `photo_preview`, `video_prev
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `detail_komplain`
+--
+
+CREATE TABLE `detail_komplain` (
+  `id_komplain` int(11) NOT NULL,
+  `bukti_komplain` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `gambar`
 --
 
@@ -54,6 +65,36 @@ CREATE TABLE `gambar` (
   `id` int(11) NOT NULL,
   `id_aplikasi` int(11) NOT NULL,
   `gambar` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `gambar`
+--
+
+INSERT INTO `gambar` (`id`, `id_aplikasi`, `gambar`) VALUES
+(1, 19, '5da33246541b6jpg.jpg'),
+(3, 19, '5da332465b5acjpg.jpg'),
+(5, 19, '5da3324660f19jpg.jpg'),
+(6, 20, '5da3386455795png.png'),
+(7, 20, '5da33864590b6jpg.jpg'),
+(8, 19, '5da33af95b2f9jpg.jpg'),
+(9, 19, '5da4598e35981jpg.jpg'),
+(10, 19, '5da4598e4a31djpg.jpg'),
+(11, 19, '5da4598e4daa5jpg.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `komplain`
+--
+
+CREATE TABLE `komplain` (
+  `id` int(11) NOT NULL,
+  `nama_client` varchar(255) NOT NULL,
+  `nomor_client` varchar(20) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `website` varchar(255) NOT NULL,
+  `komplain` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -67,11 +108,23 @@ ALTER TABLE `aplikasi`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeks untuk tabel `detail_komplain`
+--
+ALTER TABLE `detail_komplain`
+  ADD KEY `id_komplain` (`id_komplain`);
+
+--
 -- Indeks untuk tabel `gambar`
 --
 ALTER TABLE `gambar`
   ADD PRIMARY KEY (`id`),
   ADD KEY `gambar_ibfk_1` (`id_aplikasi`);
+
+--
+-- Indeks untuk tabel `komplain`
+--
+ALTER TABLE `komplain`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT untuk tabel yang dibuang
@@ -81,17 +134,29 @@ ALTER TABLE `gambar`
 -- AUTO_INCREMENT untuk tabel `aplikasi`
 --
 ALTER TABLE `aplikasi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT untuk tabel `gambar`
 --
 ALTER TABLE `gambar`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT untuk tabel `komplain`
+--
+ALTER TABLE `komplain`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
+
+--
+-- Ketidakleluasaan untuk tabel `detail_komplain`
+--
+ALTER TABLE `detail_komplain`
+  ADD CONSTRAINT `detail_komplain_ibfk_1` FOREIGN KEY (`id_komplain`) REFERENCES `komplain` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Ketidakleluasaan untuk tabel `gambar`

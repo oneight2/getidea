@@ -3,79 +3,50 @@ if (!$this->session->userdata('login') == true) {
     redirect('admin');
 }
 ?>
-<!-- preloader area start -->
-<div id="preloader">
-    <div class="loader"></div>
-</div>
-<!-- preloader area end -->
-<!-- page container area start -->
 
-<!-- main content area start -->
-<div class="main-content">
-    <!-- header area start -->
-    <div class="header-area">
-        <div class="row align-items-center">
-            <!-- nav and search button -->
-            <div class="col-md-6 col-sm-8 clearfix">
-                <div class="nav-btn pull-left">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="search-box pull-left">
-                    <form action="#">
-                        <input type="text" name="search" placeholder="Search..." required>
-                        <i class="ti-search"></i>
-                    </form>
-                </div>
-            </div>
-            <!-- profile info & task notification -->
+<div class="container my-2">
 
-        </div>
-    </div>
-    <div class="container my-2">
+    <div class="card">
+        <div class="card-body">
 
-        <div class="card">
-            <div class="card-body">
-
-                <h4 class="header-title">Pengelolaan Aplikasi</h4>
-                <a class="btn btn-primary btn-sm text-white my-2" data-toggle="modal" data-target="#tambah">Tambah Data</a>
-                <div class="single-table">
-                    <div class="table-responsive">
-                        <table class="table text-center">
-                            <thead class="text-uppercase bg-primary">
-                                <tr class="text-white">
-                                    <th scope="col">#</th>
-                                    <th scope="col">Aplikasi</th>
-                                    <th scope="col">Detail</th>
-                                    <th scope="col">Photo Preview</th>
-                                    <th scope="col">action</th>
+            <h4 class="header-title">Pengelolaan Aplikasi</h4>
+            <a class="btn btn-primary btn-sm text-white my-2" data-toggle="modal" data-target="#tambah">Tambah Data</a>
+            <div class="single-table">
+                <div class="table-responsive">
+                    <table class="table text-center">
+                        <thead class="text-uppercase bg-primary">
+                            <tr class="text-white">
+                                <th scope="col">#</th>
+                                <th scope="col">Aplikasi</th>
+                                <th scope="col">Detail</th>
+                                <th scope="col">Photo Preview</th>
+                                <th scope="col">action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php $i = 1; ?>
+                            <?php foreach ($aplikasi as $app) : ?>
+                                <tr>
+                                    <th scope="row"><?= $i; ?></th>
+                                    <td><?= $app['nama_app']; ?></td>
+                                    <td class="text-justify"><?= $app['detail']; ?></td>
+                                    <td><img style="height:100px; width:auto" src="<?= base_url(); ?>img/app/<?= $app['photo_preview'] ?>" alt=""></td>
+                                    <td>
+                                        <a href="<?= base_url(); ?>admin/editPage/<?= $app['id'] ?>" class="btn btn-sm btn-success"><i class="fa fa-edit"></i></a>
+                                        <a href="<?= base_url(); ?>admin/deleteData/<?= $app['id'] ?>/<?= $app['photo_preview'] ?>" class="btn btn-sm btn-danger" onclick="return confirm('r u fuckin sure to delete this shit?????')"><i class="fa fa-trash"></i></a>
+                                    </td>
                                 </tr>
-                            </thead>
-                            <tbody>
-                                <?php $i = 1; ?>
-                                <?php foreach ($aplikasi as $app) : ?>
-                                    <tr>
-                                        <th scope="row"><?= $i; ?></th>
-                                        <td><?= $app['nama_app']; ?></td>
-                                        <td class="text-justify"><?= $app['detail']; ?></td>
-                                        <td><img style="height:100px; width:auto" src="<?= base_url(); ?>img/app/<?= $app['photo_preview'] ?>" alt=""></td>
-                                        <td>
-                                            <a href="<?= base_url(); ?>admin/editPage/<?= $app['id'] ?>" class="btn btn-sm btn-success"><i class="fa fa-edit"></i></a>
-                                            <a href="<?= base_url(); ?>admin/deleteData/<?= $app['id'] ?>/<?= $app['photo_preview'] ?>" class="btn btn-sm btn-danger" onclick="return confirm('r u fuckin sure to delete this shit?????')"><i class="fa fa-trash"></i></a>
-                                        </td>
-                                    </tr>
-                                    <?php $i++; ?>
-                                <?php endforeach; ?>
-                            </tbody>
-                        </table>
-                    </div>
+                                <?php $i++; ?>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
     </div>
-
 </div>
+
+
 <!-- main content area end -->
 <!-- modal -->
 <div class="modal" id="tambah">
@@ -111,10 +82,3 @@ if (!$this->session->userdata('login') == true) {
     </div>
 </div>
 <!-- modal end -->
-<!-- footer area start-->
-<footer>
-    <div class="footer-area">
-        <p>© Copyright 2019. All right reserved.</p>
-    </div>
-</footer>
-<!-- footer area end-->
