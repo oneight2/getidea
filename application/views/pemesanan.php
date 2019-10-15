@@ -14,7 +14,9 @@
       <div class="tab-pane fade show active" id="pemesanan-btn" role="tabpanel" aria-labelledby="pemesanan-tab">
         <div class="accordion" id="accordionExample">
           <div class="tabs">
-            
+            <p>Pemesanan atau sebelumnya ingin berkonsultasi, kami sangat terbuka untuk lebih meyakinkan anda dalam membuat sebuah sistem digital berplatform website, bisa langsung mengubungi melalui wa atau email</p>
+          </div>
+          <div class="tabs">
             <input type="radio" id="tab1" name="tab-control" checked>
             <input type="radio" id="tab2" name="tab-control">
             <input type="radio" id="tab3" name="tab-control">
@@ -44,7 +46,6 @@
               </label>
             </li>
           </ul>
-          
           <div class="slider"><div class="indicator"></div></div>
           <div class="content">
             <section>
@@ -66,14 +67,14 @@
               <h2>Pembangunan</h2>
               <p>
                 Dalam pembangunan sistem digital berplatform website ini, kami akan selalu melibatkan anda, karena kepuasan anda adalah hal yang paling utama bagi kami, dengan terlibatnya anda dalam pembangunan ini, tentu semua yang anda inginkan sebelumnya akan terus terkontrol. <br>
-              Untuk waktu pembangunannya tergantung dari seberapa banyak rancangan kebutuhan yang sudah disepakati, dan dari seberapa sulit hambatan atau masalah yang ada pada aktivitas konvensional sehingga harus diselesaikan dalam sistem digital ini.
+                Untuk waktu pembangunannya tergantung dari seberapa banyak rancangan kebutuhan yang sudah disepakati, dan dari seberapa sulit hambatan atau masalah yang ada pada aktivitas konvensional sehingga harus diselesaikan dalam sistem digital ini.
               </p>
             </section>
             <section>
               <h2>Launching & Pemeliharaan </h2>
               <p>
                 Setelah pembangunan sitem digital berplatform website ini selesai, sebelum melanjutkan ketahap berikutnya yaitu launching, terlebih dahulu anda harus menyelesaikan semua biaya.
-              Pemeliharaan sistem digital ini akan kita lakukan untuk mengoptimalkan kinerja dari sistem digital tersebut.
+                Pemeliharaan sistem digital ini akan kita lakukan untuk mengoptimalkan kinerja dari sistem digital tersebut.
               </p>
             </section>
           </div>

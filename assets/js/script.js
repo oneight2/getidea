@@ -9,25 +9,17 @@ setInterval(function(){
   i++;
   if(i>($('.slide .item .slide-item').length-1)) i = 0;
 }, 3000);
- $('.timeline-3').Timeline({
-  autoplay: true,
-  mode: 'vertical',
-  itemClass: 'box-item'
-   });
 
 $("#menu-toggle").click(function(e){
    e.preventDefault();
    $("#wrapper").toggleClass("menuDisplayed");
 });
 $('#fullpage').fullpage({
-  // sectionsColor: ['#B8AE9C', '#348899', '#F2AE72', '#5C832F', '#B8B89F'],
   sectionSelector: '.vertical-scrolling',
   navigation: true,
   slidesNavigation: true,
   controlArrows: false,
   anchors: ['firstSection', 'secondSection', 'thirdSection', 'fourthSection', 'fifthSection', 'sixSection' ],
-  menu: '#menu',
-  
 });
 
   if ($('.prettyprint').length) {

@@ -56,7 +56,7 @@ p{
 
 #sidebar-wrapper{
   z-index:1;
-  position: absolute;
+  position: fixed;
   width:100px;
   height:100vh;
   overflow-y:hidden;
@@ -106,16 +106,16 @@ p{
 .sidebar-nav{
   padding:0;
   list-style:none; 
-    transition:all .5s;
-    width:100%;
-    text-align:center;
+  transition:all .5s;
+  width:100%;
+  text-align:center;
 }
 
 .sidebar-nav li{
   line-height:40px;  
-    width:100%;
-    transition:all .3s;
-    padding:10px;
+  width:100%;
+  transition:all .3s;
+  padding:10px;
 }
 
 .sidebar-nav li a {
@@ -372,7 +372,7 @@ p{
   position: fixed;
   max-width: 200px;
   bottom: 0;
-  right: 0;
+  right: 30px;
   z-index: 0;
 }
 .nav-item{
