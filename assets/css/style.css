@@ -369,9 +369,9 @@ p{
 
 /*page pemesnanan*/
 #pemesanan .img-pemesanan{
-  position: fixed;
-  max-width: 200px;
-  bottom: 0;
+  position: absolute;
+  width: 15vw;
+  bottom: -130px;
   right: 30px;
   z-index: 0;
 }

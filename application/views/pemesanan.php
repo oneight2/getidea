@@ -1,5 +1,5 @@
 <div id="pemesanan">
-  <img src="<?= base_url() ?>img/faq-img-1.png" alt="" class="img-pemesanan">
+  <img src="<?= base_url() ?>img/faq-icon.svg" alt="" class="img-pemesanan">
   <div class="container pt-5">
     <h1>Pemesanan dan Komplain</h1>
     <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -15,8 +15,16 @@
         <div class="accordion" id="accordionExample">
           <div class="tabs">
             <p>Pemesanan atau sebelumnya ingin berkonsultasi, kami sangat terbuka untuk lebih meyakinkan anda dalam membuat sebuah sistem digital berplatform website, bisa langsung mengubungi melalui wa atau email</p>
+            <div class="row">
+              <div class="col-md-6">
+                <a class="btn btn-lg btn-outline-success btn-block"><i class="fa fa-whatsapp"></i> Whatsapp</a>
+              </div>
+              <div class="col-md-6">
+                <a class="btn btn-lg btn-outline-danger btn-block"><i class="fa fa-envelope"> Email</i></a>
+              </div>
+            </div>
           </div>
-          <div class="tabs">
+          <div class="tabs mt-5">
             <input type="radio" id="tab1" name="tab-control" checked>
             <input type="radio" id="tab2" name="tab-control">
             <input type="radio" id="tab3" name="tab-control">
