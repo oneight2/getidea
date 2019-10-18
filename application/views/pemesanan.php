@@ -104,14 +104,14 @@
                 <img alt="ERP Implementation" class="img-fluid" src="https://finbyz.tech/files/erp-implements.svg" title="ERP Implementation">
               </div>
               <div class="col-6">
-                <form action="" class="form-row" method="post" action="" enctype="multipart/form-data">
+                <form class="form-row" method="post" action="<?= base_url(); ?>pemesanan/komplain" enctype="multipart/form-data">
                   <div class="form-group col-6">
                     <label for="nama">Nama anda</label>
-                    <input type="text" class="form-control" id="nama" name="nama">
+                    <input type="text" class="form-control" id="nama" name="nama_client">
                   </div>
                   <div class="form-group col-6">
                     <label for="nomor">Nomor yang dapat dihubungi</label>
-                    <input type="number" class="form-control" id="nomor" name="nomor">
+                    <input type="number" class="form-control" id="nomor" name="nomor_client">
                   </div>
                   <div class="form-group col-6">
                     <label for="email">Email yang dapat dihubungi</label>
@@ -123,14 +123,14 @@
                   </div>
                   <div class="form-group col-12">
                     <label for="keluhan">Komplain aplikasi</label>
-                    <textarea class="form-control" id="keluhan" rows="3" name="keluhan"></textarea>
+                    <textarea class="form-control" id="keluhan" rows="3" name="komplain"></textarea>
                   </div>
                   <div class="form-group col-12">
                     <label for="costumFile" class="text-white">Gambar(pilih satu atau lebih)</label><br>
                     <input type="file" id="customFile" name="gambar[]" multiple>
                   </div>
                   <div class="col-12">
-                    <button type="submit" class="btn btn-primary pull-right" name="submit">Kirim</button>
+                    <button type="submit" class="btn btn-block btn-primary pull-right" name="submit">Kirim</button>
                   </div>
                 </form>
               </div>

@@ -1,14 +1,26 @@
+//start script slide dong
 var i =0;
+$.each($('.indicator-gambar'),function(index){
+  $(this).on("click",function(){
+    i = index;
+    slideDong();
+  })
+});
 setInterval(function(){
+  slideDong();
+  i++;
+  if(i>($('.slide .item .slide-item').length-1)) i = 0;
+}, 4000);
+
+function slideDong(){
   $.each($('.slide .item .slide-item'),function(index){
     $('.slide .item .slide-item').eq(index).removeClass('active')
     $('.indicator-gambar').eq(index).parent().removeClass('active')
   })
   $('.slide .item .slide-item').eq(i).addClass('active');
   $('.indicator-gambar').eq(i).parent().addClass('active')
-  i++;
-  if(i>($('.slide .item .slide-item').length-1)) i = 0;
-}, 3000);
+}
+//end scrip slide dong
 
 var pageURL = $(location).attr("href");
 if (  pageURL == "http://localhost/getidea/pemesanan") {
