@@ -32,7 +32,7 @@ if (!$this->session->userdata('login') == true) {
                                     <td><?= $row['email']; ?></td>
                                     <td><?= $row['website']; ?></td>
 
-                                    <td><a class="btn btn-primary btn-sm text-white my-2" data-toggle="modal" data-target="#detail">detail</a></td>
+                                    <td><button value="<?= $row['id']; ?>" class="btn btn-primary btn-sm text-white my-2 x" id="tblAjax" data-toggle="modal" data-target="#detail">detail</button></td>
                                 </tr>
                                 <tr>
                                     <td>Komplain :</td>
@@ -51,23 +51,15 @@ if (!$this->session->userdata('login') == true) {
 
 <!-- modal -->
 <div class="modal" id="detail">
-    <div class="modal-dialog modal-xl">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content ">
-            <div class="modal-body">
-                <div class="row">
-                    <?php foreach ($detail_komplain as $detail) : ?>
-                        <?php if ($detail['id_komplain'] == $row['id']) : ?>
-                            <div class="col-2">
-                                <div class="card">
-                                    <a class="mt-2" href="<?= base_url() ?>img/komplain/<?= $detail['gambar'] ?>">
-                                        <img src="<?= base_url() ?>img/komplain/<?= $detail['gambar'] ?>" alt="" class="card-img-top">
-                                    </a>
-                                </div>
-                            </div>
-                        <?php endif; ?>
-                    <?php endforeach; ?>
-                </div>
+            <div class="modal-body ajax" id="ajax">
+
             </div>
         </div>
     </div>
 </div>
+
+<script>
+
+</script>

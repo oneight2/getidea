@@ -72,6 +72,12 @@ class Admin extends CI_Controller
         $this->load->view('templatesAdmin/footer');
     }
 
+    public function ajax($id)
+    {
+        $data['detail'] = $this->Admin_model->getGambarById($id);
+        $this->load->view('admin/ajax');
+    }
+
     //proses
     public function addData()
     {
