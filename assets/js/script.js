@@ -22,16 +22,24 @@ function slideDong(){
 }
 //end scrip slide dong
 
-$("#menu-toggle").click(function(e){
-   e.preventDefault();
-   $("#wrapper").toggleClass("menuDisplayed");
-});
+var pageURL = $(location).attr("href");
+if (  pageURL == "http://localhost/getidea/pemesanan") {
+      $("html").css({
+             'overflow' :  'auto'
+         })            
+}
+if (  pageURL != "http://localhost/getidea/pemesanan") {
 $('#fullpage').fullpage({
   sectionSelector: '.vertical-scrolling',
   navigation: true,
   slidesNavigation: true,
   controlArrows: false,
   anchors: ['firstSection', 'secondSection', 'thirdSection', 'fourthSection', 'fifthSection', 'sixSection' ],
+});       
+}       
+$("#menu-toggle").click(function(e){
+   e.preventDefault();
+   $("#wrapper").toggleClass("menuDisplayed");
 });
 
   if ($('.prettyprint').length) {

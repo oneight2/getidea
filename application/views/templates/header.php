@@ -28,7 +28,7 @@
                         <li><a href="<?= base_url(); ?>">Tentang Kami</a></li>
                         <li><a href="<?= base_url(); ?>Portfolio">Portfolio</a></li>
                         <li><a href=" ">Galeri</a></li>
-                        <li><a href="<?= base_url() ?>pemesanan ">Pemesanan dan Komplain</a></li>
+                        <li><a href="<?= base_url() ?>pemesanan " id="hal-pemesanan">Pemesanan dan Komplain</a></li>
                         <li><a href=" ">Kontak</a></li>
                     </ul>
                 </div>
