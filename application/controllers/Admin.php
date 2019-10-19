@@ -72,10 +72,16 @@ class Admin extends CI_Controller
         $this->load->view('templatesAdmin/footer');
     }
 
-    public function ajax($id)
+    public function detail_komplain($id)
     {
-        $data['detail'] = $this->Admin_model->getGambarById($id);
-        $this->load->view('admin/ajax');
+        $data['judul'] = 'Detail Komplain';
+        $data['komplain'] = $this->Admin_model->getById($id, 'komplain');
+        $data['detail'] = $this->Admin_model->getByIdAll($id);
+
+        $this->load->view('templatesAdmin/header', $data);
+        $this->load->view('templatesAdmin/sidebar');
+        $this->load->view('admin/detail_komplain');
+        $this->load->view('templatesAdmin/footer');
     }
 
     //proses

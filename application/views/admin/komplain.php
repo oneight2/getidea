@@ -32,11 +32,7 @@ if (!$this->session->userdata('login') == true) {
                                     <td><?= $row['email']; ?></td>
                                     <td><?= $row['website']; ?></td>
 
-                                    <td><button value="<?= $row['id']; ?>" class="btn btn-primary btn-sm text-white my-2 x" id="tblAjax" data-toggle="modal" data-target="#detail">detail</button></td>
-                                </tr>
-                                <tr>
-                                    <td>Komplain :</td>
-                                    <td colspan="5"><?= $row['komplain'] ?></td>
+                                    <td><a href="<?= base_url() ?>admin/detail_komplain/<?= $row['id']; ?>" class="btn btn-primary btn-sm text-white">detail</a></td>
                                 </tr>
                                 <?php $i++; ?>
                             <?php endforeach; ?>
@@ -47,19 +43,3 @@ if (!$this->session->userdata('login') == true) {
         </div>
     </div>
 </div>
-
-
-<!-- modal -->
-<div class="modal" id="detail">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content ">
-            <div class="modal-body ajax" id="ajax">
-
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-
-</script>

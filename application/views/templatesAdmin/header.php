@@ -15,12 +15,46 @@
     <!-- amchart css -->
     <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
     <!-- others css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.12/jquery.bxslider.min.css">
     <!-- <link rel="stylesheet" href="<?= base_url(); ?>assets/css/default-css.css"> -->
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/bootstrap.css">
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/typography.css">
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/responsive.css">
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/stylesAdmin.css">
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/dropzone.css">
+    <style>
+        html,
+        body {
+            font-family: Arial;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .btn-pause.active:before {
+            content: 'Now Pause';
+            display: block;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        .menu {
+            text-align: center;
+            display: block;
+            margin: 20px auto
+        }
+
+        .menu a {
+            display: inline-block;
+            padding: 2px;
+            line-height: 0;
+        }
+
+        .menu a.active {
+            border: 1px solid red;
+        }
+    </style>
 </head>
 
 <body>

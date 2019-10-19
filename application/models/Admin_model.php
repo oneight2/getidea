@@ -50,6 +50,16 @@ class Admin_model extends CI_Model
         return $this->db->get_where('aplikasi', ['id' => $id])->row_array();
     }
 
+    public function getById($id, $table)
+    {
+        return $this->db->get_where($table, ['id' => $id])->row_array();
+    }
+
+    public function getByIdAll($id)
+    {
+        return $this->db->get_where('detail_komplain', ['id_komplain' => $id])->result_array();
+    }
+
     public function edit($photo)
     {
         $data = [
