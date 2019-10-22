@@ -14,10 +14,10 @@ setInterval(function(){
 
 function slideDong(){
   $('.slide .item .slide-item').removeClass('active');
-  $('.indicator-gambar').parent().removeClass('active')
+  $('.indicator-gambar').parent().removeClass('active');
 
   $('.slide .item .slide-item').eq(i).addClass('active');
-  $('.indicator-gambar').eq(i).parent().addClass('active')
+  $('.indicator-gambar').eq(i).parent().addClass('active');
 }
 //end scrip slide dong
 
